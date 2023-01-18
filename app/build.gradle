@@ -7,6 +7,11 @@ plugins {
     id 'com.google.devtools.ksp' version '1.6.10-1.0.2'
 }
 
+def localPropertiesFile = rootProject.file("local.properties")
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(localPropertiesFile))
+
+
 android {
     namespace 'com.azmetov.stockmarketapp'
     compileSdk 33
@@ -22,6 +27,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        buildConfigField "String", "API_KEY", localProperties['apiKey']
     }
 
     buildTypes {
