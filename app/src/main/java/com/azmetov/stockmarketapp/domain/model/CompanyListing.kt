@@ -1,4 +1,4 @@
-package com.azmetov.stockmarketapp.domain.repository
+package com.azmetov.stockmarketapp.domain.model
 
 data class CompanyListing(
     val name: String,

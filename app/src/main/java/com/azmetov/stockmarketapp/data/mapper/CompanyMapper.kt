@@ -1,7 +1,7 @@
 package com.azmetov.stockmarketapp.data.mapper
 
 import com.azmetov.stockmarketapp.data.local.CompanyListingEntity
-import com.azmetov.stockmarketapp.domain.repository.CompanyListing
+import com.azmetov.stockmarketapp.domain.model.CompanyListing
 
 fun CompanyListingEntity.toCompanyListing(): CompanyListing {
     return CompanyListing(
