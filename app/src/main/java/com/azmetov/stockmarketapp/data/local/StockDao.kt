@@ -9,11 +9,9 @@ import androidx.room.Query
 interface StockDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertCompanyListings(
-        companyListingEntities: List<CompanyListingEntity>
-    )
+    suspend fun insertCompanyListings(companyListingEntities: List<CompanyListingEntity>)
 
-    @Query("DELETE FROM companyListingEntities")
+    @Query("DELETE FROM companylistingentity")
     suspend fun clearCompanyListings()
 
     @Query(
