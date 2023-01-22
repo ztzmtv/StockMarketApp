@@ -15,6 +15,6 @@ interface StockApi {
 
     companion object {
         private const val API_KEY = BuildConfig.API_KEY
-        private const val BASE_URL = "https://alphavantage.co"
+        const val BASE_URL = "https://alphavantage.co"
     }
 }
